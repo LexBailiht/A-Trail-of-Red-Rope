@@ -11,24 +11,29 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI NameBox;
     public GameObject ContinueIcon;
     private Queue<string> sentences;
+    private Queue<string> names;
     public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         sentences = new Queue<string> ();
+        names = new Queue<string>();
         ContinueIcon.SetActive (false);
     }
     
     public void StartDialogue (Dialogue dialogue)
     {
         animator.SetBool("IsOpen", true);
-        NameBox.text = dialogue.name;
 
         sentences.Clear();
 
         foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue (sentence);
+        }
+        foreach (string name in dialogue.names)
+        {
+            names.Enqueue(name);
         }
         DisplayNextSentence();
     }
@@ -41,7 +46,9 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         string sentence = sentences.Dequeue();
+        string name = names.Dequeue();
         StopAllCoroutines();
+        NameBox.text = name;
         StartCoroutine(TypeSentence(sentence));
     }
 
