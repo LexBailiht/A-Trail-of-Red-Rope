@@ -1060,7 +1060,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Miles
+    names:
+    - Miles
+    - Barry
     sentences:
     - Kept ya waiting huh
     - Second sentence.
