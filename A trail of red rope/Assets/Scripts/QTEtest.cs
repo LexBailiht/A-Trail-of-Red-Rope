@@ -14,7 +14,7 @@ public class QTEtest : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    void OnPLayerCLick()
+    void OnCLick()
     {
         OnQTEtest?.Invoke(this, EventArgs.Empty);
     }

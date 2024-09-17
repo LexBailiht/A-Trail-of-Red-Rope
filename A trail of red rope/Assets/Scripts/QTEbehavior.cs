@@ -10,7 +10,7 @@ public class QTEbehavior : MonoBehaviour
 {
     public Button QTE;
     private bool qteON;
-    private float TimerAmount = 1;
+    private float TimerAmount = 2.5f;
     private float CurrentTimer;
     private bool PassQTE;
     public event EventHandler OnQTEwin;
@@ -34,6 +34,7 @@ public class QTEbehavior : MonoBehaviour
                 PassQTE = true;
                 OnQTEwin?.Invoke(this, EventArgs.Empty);
                 QTE.gameObject.SetActive(false);
+                Debug.Log("QTE WIN");
             }
 
 
@@ -42,6 +43,7 @@ public class QTEbehavior : MonoBehaviour
             {
                 PassQTE = false;
                 QTE.gameObject.SetActive(false);
+                Debug.Log("QTE LOSE");
             }
         }
     }
