@@ -9,4 +9,8 @@ public class Dialogue
 
     [TextArea(3, 10)]
     public string[] sentences;
+    public string[] musics;
+    public string[] sfxs;
+    public string[] backgrounds;
+    public string[] animations;
 }

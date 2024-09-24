@@ -12,12 +12,20 @@ public class DialogueManager : MonoBehaviour
     public GameObject ContinueIcon;
     private Queue<string> sentences;
     private Queue<string> names;
+    private Queue<string> sfxs;
+    private Queue<string> musics;
+    private Queue<string> backgrounds;
+    private Queue<string> animations;
     public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         sentences = new Queue<string> ();
         names = new Queue<string>();
+        sfxs = new Queue<string>();
+        musics = new Queue<string>();
+        backgrounds = new Queue<string>();
+        animations = new Queue<string>();
         ContinueIcon.SetActive (false);
     }
     
@@ -26,6 +34,11 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("IsOpen", true);
 
         sentences.Clear();
+        names.Clear();
+        sfxs.Clear();
+        musics.Clear();
+        backgrounds.Clear();
+        animations.Clear();
 
         foreach (string sentence in dialogue.sentences)
         {
@@ -34,6 +47,22 @@ public class DialogueManager : MonoBehaviour
         foreach (string name in dialogue.names)
         {
             names.Enqueue(name);
+        }
+        foreach (string sfx in dialogue.sfxs)
+        {
+            sfxs.Enqueue(sfx);
+        }
+        foreach (string music in dialogue.musics)
+        {
+            musics.Enqueue(music);
+        }
+        foreach (string background in dialogue.backgrounds)
+        {
+            backgrounds.Enqueue(background);
+        }
+        foreach (string animation in dialogue.animations)
+        {
+            animations.Enqueue(animation);
         }
         DisplayNextSentence();
     }
@@ -47,8 +76,28 @@ public class DialogueManager : MonoBehaviour
         }
         string sentence = sentences.Dequeue();
         string name = names.Dequeue();
+        string sfx = sfxs.Dequeue();
+        string music = musics.Dequeue();
+        string background = backgrounds.Dequeue();
+        string animation = animations.Dequeue();
         StopAllCoroutines();
         NameBox.text = name;
+        if (sfx != string.Empty)
+        {
+            BroadcastMessage("PlaySoundEffect", sfx);
+        }
+        if (music != string.Empty)
+        {
+            BroadcastMessage("PlayMusic", music);
+        }
+        if (background != string.Empty)
+        {
+            BroadcastMessage("SetBackground", background);
+        }
+        if (animation != string.Empty)
+        {
+            BroadcastMessage("SetAnimation", animation);
+        }
         StartCoroutine(TypeSentence(sentence));
     }
 
