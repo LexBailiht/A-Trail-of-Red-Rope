@@ -11,6 +11,9 @@ public class DialogueTrigger : MonoBehaviour
     {
         dialoguenumber = GameManager.GetComponent<GameManager>().DialogueNumber;
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue[dialoguenumber]);
-        gameObject.SetActive(false);
+        if (gameObject.tag == "playbutton")
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
