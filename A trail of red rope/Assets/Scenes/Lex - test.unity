@@ -1369,6 +1369,7 @@ MonoBehaviour:
   NameBox: {fileID: 1816397456}
   ContinueIcon: {fileID: 2024073393}
   animator: {fileID: 329054877}
+  ButtonPanel: {fileID: 1987239782}
 --- !u!4 &961731746
 Transform:
   m_ObjectHideFlags: 0
@@ -2576,7 +2577,7 @@ MonoBehaviour:
     - Miles
     sentences:
     - Slow down Barry, the point of a stakeout is to avoid getting noticed.
-    - I just want to get this over with with.
+    - I just want to get this over with.
     - My Wife said she was going to prepare something nice for dinner, since we have
       been on this case for so long.
     - "Must be nice\u2026"
@@ -3129,7 +3130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1987239783
 RectTransform:
   m_ObjectHideFlags: 0

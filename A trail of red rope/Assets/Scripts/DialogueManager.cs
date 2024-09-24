@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> backgrounds;
     private Queue<string> animations;
     public Animator animator;
+    public GameObject ButtonPanel;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +33,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue (Dialogue dialogue)
     {
         animator.SetBool("IsOpen", true);
-
+        ButtonPanel.SetActive (false);
         sentences.Clear();
         names.Clear();
         sfxs.Clear();
@@ -118,6 +119,6 @@ public class DialogueManager : MonoBehaviour
         ContinueIcon.SetActive(false);
         animator.SetBool("IsOpen", false);
         Debug.Log("End of conversation.");
-
+        ButtonPanel.SetActive(true);
     }
 }
