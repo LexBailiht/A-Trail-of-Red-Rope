@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - playbutton
+  - talk
+  - scrutinize
+  - investigate
+  - move
   layers:
   - Default
   - TransparentFX

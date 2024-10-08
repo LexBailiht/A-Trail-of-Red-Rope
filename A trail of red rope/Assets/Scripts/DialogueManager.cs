@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI DialogueBox;
     public TextMeshProUGUI NameBox;
     public GameObject ContinueIcon;
+    public GameObject GameManager;
     private Queue<string> sentences;
     private Queue<string> names;
     private Queue<string> sfxs;
@@ -32,6 +33,24 @@ public class DialogueManager : MonoBehaviour
     
     public void StartDialogue (Dialogue dialogue)
     {
+        GameManager.GetComponent<GameManager>().LastDialogueNumber = dialogue.dialogueidentifier;
+        if (dialogue.button == "talk")
+        {
+            GameManager.GetComponent<GameManager>().TalkLastDialogueNumber = dialogue.dialogueidentifier;
+        }
+        if (dialogue.button == "scrutinize")
+        {
+            GameManager.GetComponent<GameManager>().ScrutinizeLastDialogueNumber = dialogue.dialogueidentifier;
+        }
+        if (dialogue.button == "investigate")
+        {
+            GameManager.GetComponent<GameManager>().InvestigateLastDialogueNumber = dialogue.dialogueidentifier;
+        }
+        if (dialogue.button == "move")
+        {
+            GameManager.GetComponent<GameManager>().MoveLastDialogueNumber = dialogue.dialogueidentifier;
+        }
+        GameManager.GetComponent<GameManager>().UpdateGameState();
         animator.SetBool("IsOpen", true);
         ButtonPanel.SetActive (false);
         sentences.Clear();
@@ -119,6 +138,13 @@ public class DialogueManager : MonoBehaviour
         ContinueIcon.SetActive(false);
         animator.SetBool("IsOpen", false);
         Debug.Log("End of conversation.");
-        ButtonPanel.SetActive(true);
+        if (GameManager.GetComponent<GameManager>().TalkLastDialogueNumber == 2)
+        {
+            GameManager.GetComponent<QTEbehavior>().QuickTimeEvent();
+        }
+        else
+        {
+            ButtonPanel.SetActive(true);
+        }
     }
 }

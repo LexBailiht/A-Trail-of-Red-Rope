@@ -8,7 +8,7 @@ using Unity.VisualScripting;
 
 public class QTEbehavior : MonoBehaviour
 {
-    public Button QTE;
+    public GameObject QTE;
     private bool qteON;
     private float TimerAmount = 2.5f;
     private float CurrentTimer;
@@ -19,7 +19,7 @@ public class QTEbehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        QTE.gameObject.SetActive(false);
+        QTE.SetActive(false);
     }
 
     // Update is called once per frame
@@ -33,24 +33,26 @@ public class QTEbehavior : MonoBehaviour
                 //if the button is pressed within the time frame this function will send out the QTEwin event 
                 PassQTE = true;
                 OnQTEwin?.Invoke(this, EventArgs.Empty);
-                QTE.gameObject.SetActive(false);
+                QTE.SetActive(false);
                 Debug.Log("QTE WIN");
+                qteON = false;
             }
 
 
             CurrentTimer -= Time.deltaTime;
-            if (CurrentTimer < 0)
+            if (Input.GetKeyDown(KeyCode.Space) && CurrentTimer < 0)
             {
                 PassQTE = false;
-                QTE.gameObject.SetActive(false);
+                QTE.SetActive(false);
                 Debug.Log("QTE LOSE");
+                qteON = false;
             }
         }
     }
 
     public void QuickTimeEvent()
     {
-        QTE.gameObject.SetActive(true);
+        QTE.SetActive(true);
         CurrentTimer = TimerAmount;
         qteON = true;
     }

@@ -5,15 +5,30 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public int DialogueNumber = 0;
-    // Start is called before the first frame update
+    public int LastDialogueNumber = 0;
+    public int TalkDialogueNumber = 0;
+    public int TalkLastDialogueNumber = 0;
+    public int ScrutinizeDialogueNumber = 0;
+    public int ScrutinizeLastDialogueNumber = 0;
+    public int InvestigateDialogueNumber = 0;
+    public int InvestigateLastDialogueNumber = 0;
+    public int MoveDialogueNumber = 0;
+    public int MoveLastDialogueNumber = 0;
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void UpdateGameState()
+    {
+        if (TalkLastDialogueNumber == 1)
+        {
+            TalkDialogueNumber = 1;
+        }
     }
 }

@@ -283,7 +283,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.8639607, y: -0.25038964, z: -5.211196}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1154037329}
@@ -329,7 +329,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 42e2e536fd2a8484d97832f1199c9d33, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bca0060107140d04abef5d31ccb19a9c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -768,7 +768,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 411bf598712759646a7a6c813df4d55b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 66c2e72d7840b4547b281285cc9a836f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -788,8 +788,8 @@ Transform:
   m_GameObject: {fileID: 304496745}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.8639607, y: -0.25038964, z: -5.211196}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalPosition: {x: 2.85, y: -0.22, z: -5.211196}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1154037329}
@@ -908,6 +908,140 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &346968312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 346968313}
+  - component: {fileID: 346968315}
+  - component: {fileID: 346968314}
+  m_Layer: 5
+  m_Name: QTE Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &346968313
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346968312}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 847721167}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 213, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &346968314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346968312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Press Space!
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -68.43829, y: 0, z: 45.51217, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &346968315
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346968312}
+  m_CullTransparentMesh: 1
 --- !u!1 &403080010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,9 +1258,10 @@ GameObject:
   - component: {fileID: 844496837}
   - component: {fileID: 844496836}
   - component: {fileID: 844496835}
+  - component: {fileID: 844496838}
   m_Layer: 5
   m_Name: Move Button
-  m_TagString: Untagged
+  m_TagString: move
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1194,7 +1329,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 844496836}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 844496838}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &844496836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1233,6 +1380,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 844496833}
   m_CullTransparentMesh: 1
+--- !u!114 &844496838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844496833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f47fb78d83e332479213a52b2682ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - dialogueidentifier: 0
+    button: move
+    names:
+    - Barry
+    sentences:
+    - Where are you going? They're just about to meet!
+    musics:
+    - 
+    sfxs:
+    - 
+    backgrounds:
+    - 
+    animations:
+    - 
+  dialoguenumber: 0
+  talkdialoguenumber: 0
+  scrutinizedialoguenumber: 0
+  investigatedialoguenumber: 0
+  movedialoguenumber: 0
+  GameManager: {fileID: 1799654814}
 --- !u!1 &847721163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,6 +1507,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 346968313}
+  - {fileID: 1260637724}
+  - {fileID: 1266725368}
   - {fileID: 403080011}
   - {fileID: 1987239783}
   m_Father: {fileID: 0}
@@ -1368,6 +1551,7 @@ MonoBehaviour:
   DialogueBox: {fileID: 9809499}
   NameBox: {fileID: 1816397456}
   ContinueIcon: {fileID: 2024073393}
+  GameManager: {fileID: 1799654814}
   animator: {fileID: 329054877}
   ButtonPanel: {fileID: 1987239782}
 --- !u!4 &961731746
@@ -1629,6 +1813,246 @@ MonoBehaviour:
   Miles: {fileID: 19801385}
   Barry: {fileID: 304496745}
   Giovanni: {fileID: 1373301694}
+--- !u!1 &1260637723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1260637724}
+  - component: {fileID: 1260637727}
+  - component: {fileID: 1260637726}
+  - component: {fileID: 1260637725}
+  m_Layer: 5
+  m_Name: NotebookButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1260637724
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260637723}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 847721167}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -108, y: -97}
+  m_SizeDelta: {x: 160, y: 160}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1260637725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260637723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1260637726}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1260637726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260637723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: fe2dfe6aade31ee4d84b6b9b97feddfe, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1260637727
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260637723}
+  m_CullTransparentMesh: 1
+--- !u!1 &1266725367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1266725368}
+  - component: {fileID: 1266725371}
+  - component: {fileID: 1266725370}
+  - component: {fileID: 1266725369}
+  m_Layer: 5
+  m_Name: Settings Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1266725368
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266725367}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 847721167}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108, y: -97}
+  m_SizeDelta: {x: 160, y: 160}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1266725369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266725367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1266725370}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1266725370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266725367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: f60f12514497b714a9c8a46e3b848c7b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1266725371
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266725367}
+  m_CullTransparentMesh: 1
 --- !u!1 &1341136027
 GameObject:
   m_ObjectHideFlags: 0
@@ -1704,7 +2128,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.8639607, y: -0.25038964, z: -5.211196}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1154037329}
@@ -1750,7 +2174,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2e97c4a6ac248cc44866151dc99f241f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 02044d934fc01d84384a27372a3cface, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1819,7 +2243,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e360fb6f5e5abe4eb5eda6678b05e2f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8e02807c6d43214db4e83c645345262, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1839,8 +2263,8 @@ Transform:
   m_GameObject: {fileID: 1418840685}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5981821, y: -1.5707489, z: 0.35737324}
-  m_LocalScale: {x: 1.4253075, y: 1.1096146, z: 20}
+  m_LocalPosition: {x: -0.6215, y: -1.575, z: 0}
+  m_LocalScale: {x: 1.64604, y: 1.5228, z: 23.431559}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1341136028}
@@ -1857,9 +2281,10 @@ GameObject:
   - component: {fileID: 1628369087}
   - component: {fileID: 1628369086}
   - component: {fileID: 1628369085}
+  - component: {fileID: 1628369088}
   m_Layer: 5
   m_Name: Scrutinize Button
-  m_TagString: Untagged
+  m_TagString: scrutinize
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1927,7 +2352,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1628369086}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1628369088}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1628369086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1966,6 +2403,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1628369083}
   m_CullTransparentMesh: 1
+--- !u!114 &1628369088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628369083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f47fb78d83e332479213a52b2682ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - dialogueidentifier: 0
+    button: scrutinize
+    names:
+    - Barry
+    sentences:
+    - Now isn't the time for that. Focus on the task at hand.
+    musics:
+    - 
+    sfxs:
+    - 
+    backgrounds:
+    - 
+    animations:
+    - 
+  dialoguenumber: 0
+  talkdialoguenumber: 0
+  scrutinizedialoguenumber: 0
+  investigatedialoguenumber: 0
+  movedialoguenumber: 0
+  GameManager: {fileID: 1799654814}
 --- !u!1 &1654558270
 GameObject:
   m_ObjectHideFlags: 0
@@ -2065,7 +2535,7 @@ GameObject:
   - component: {fileID: 1734917340}
   m_Layer: 5
   m_Name: TalkButton
-  m_TagString: Untagged
+  m_TagString: talk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2103,7 +2573,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-  - names:
+  - dialogueidentifier: 1
+    button: talk
+    names:
     - Barry
     - Miles
     - Barry
@@ -2121,7 +2593,8 @@ MonoBehaviour:
     - Thanks man, you always save me from getting lectured by the Chief.
     - Just bring it net time, okay?
     - Will do.
-    - The notebook can be accessed at any time from the top right corner of the screen.
+    - <color=#24fc03>The notebook can be accessed at any time from the top right
+      corner of the screen.</color>
     musics:
     - 
     - 
@@ -2158,7 +2631,172 @@ MonoBehaviour:
     - 
     - 
     - 
+  - dialogueidentifier: 2
+    button: talk
+    names:
+    - Barry
+    - 
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - Miles
+    - Barry
+    - Miles
+    - Barry
+    - 
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - Miles
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - Barry
+    - 
+    - Barry
+    sentences:
+    - All right. All we have to do now is wait.
+    - <i>Time passes. It is now 2 minutes before the mobsters are set to meet.</i>
+    - Miles?
+    - What's up, Bear?
+    - Why are we trying to figure out what these mobsters are meeting about?
+    - "They\u2019re supposed to be meeting to discuss the Mafia\u2019s incoming shipment
+      of drugs and weapons."
+    - Hence them meeting at the shipyard, Mafia owned territory.
+    - And if we can get those details we can catch them in the act.
+    - And shut down the Mafia once and for all!
+    - "I never thought I\u2019d live to see the say."
+    - <i>Time passes. The mobsters are late, it seems.</i>
+    - Miles?
+    - What is it, Bear
+    - What do you plan to do when they show up?
+    - We will listen for as much crucial information as we can
+    - "and if they\u2019re being vague we'll have to confront them."
+    - Like approach them and interrogate them!?
+    - Precisely.
+    - But... that might cause conflict, and what if more mafia show up than we anticipated?
+    - We will just have to take the gamble that that won't happen
+    - "I\u2019ve never been much of a gambling man..."
+    - But you're great at rolling with the punches.
+    - If you say so, Miles.
+    - <i>The mafia members approach, two of them driving up in a black car and getting
+      out just in front of Miles and Barry. It's at times like this that Miles and
+      Barry are thankful that their windows are tinted.</i>
+    - This is it Miles. listen close.
+    musics:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    sfxs:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    backgrounds:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    animations:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
   dialoguenumber: 0
+  talkdialoguenumber: 0
+  scrutinizedialoguenumber: 0
+  investigatedialoguenumber: 0
+  movedialoguenumber: 0
   GameManager: {fileID: 1799654814}
 --- !u!114 &1734917341
 MonoBehaviour:
@@ -2398,6 +3036,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1799654816}
   - component: {fileID: 1799654817}
+  - component: {fileID: 1799654818}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2433,6 +3072,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogueNumber: 0
+  LastDialogueNumber: 0
+  TalkDialogueNumber: 0
+  TalkLastDialogueNumber: 0
+  ScrutinizeDialogueNumber: 0
+  ScrutinizeLastDialogueNumber: 0
+  InvestigateDialogueNumber: 0
+  InvestigateLastDialogueNumber: 0
+  MoveDialogueNumber: 0
+  MoveLastDialogueNumber: 0
+--- !u!114 &1799654818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799654814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54c9ae76eacb70845bb84ef80146b3c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QTE: {fileID: 346968312}
 --- !u!1 &1816397454
 GameObject:
   m_ObjectHideFlags: 0
@@ -2620,7 +3281,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-  - names:
+  - dialogueidentifier: 0
+    button: 
+    names:
     - Miles
     - Barry
     - Barry
@@ -2652,10 +3315,10 @@ MonoBehaviour:
       a wife."
     - "I\u2019m well aware, you find a way to remind me everyday."
     - "I have no idea what you\u2019re talking about."
-    - 'Miles and Barry arrive at the location of their stakeout. The smell of seawater
-      mixed with rust populates the air. '
-    - "The old dockyard used to be the central hub for large boats going both in
-      and out. Now it\u2019s the central hub for Mafia activity and broken dreams. "
+    - <i>Miles and Barry arrive at the location of their stakeout. The smell of seawater
+      mixed with rust populates the air.</i>
+    - "<i>The old dockyard used to be the central hub for large boats going both
+      in and out. Now it\u2019s the central hub for Mafia activity and broken dreams.</i>"
     - "Turn off the engine Barry, It\u2019s too loud."
     - "It\u2019s fine Miles, we won't be here long anyway."
     - Seriously, you stress too much.
@@ -2663,7 +3326,7 @@ MonoBehaviour:
     - If we get caught, you won't find out what Penelope made for dinner.
     - So turn the damn engine off.
     - Very well, you're right.
-    - The engine of the old wagon splutters before silencing.
+    - <i>The engine of the old wagon splutters before silencing.</i>
     - Thank you.
     - According to our intel, they should be meeting at this spot in about 10 minutes.
     - "Okay, let\u2019s dim these lights and set the mood for their romantic meetup."
@@ -2757,6 +3420,10 @@ MonoBehaviour:
     - 
     - 
   dialoguenumber: 0
+  talkdialoguenumber: 0
+  scrutinizedialoguenumber: 0
+  investigatedialoguenumber: 0
+  movedialoguenumber: 0
   GameManager: {fileID: 1799654814}
 --- !u!114 &1887604890
 MonoBehaviour:
@@ -3071,9 +3738,10 @@ GameObject:
   - component: {fileID: 1969492316}
   - component: {fileID: 1969492315}
   - component: {fileID: 1969492314}
+  - component: {fileID: 1969492317}
   m_Layer: 5
   m_Name: Investigate Button
-  m_TagString: Untagged
+  m_TagString: investigate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3141,7 +3809,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1969492315}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1969492317}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1969492315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3180,6 +3860,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1969492312}
   m_CullTransparentMesh: 1
+--- !u!114 &1969492317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969492312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f47fb78d83e332479213a52b2682ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - dialogueidentifier: 0
+    button: investigate
+    names:
+    - Barry
+    sentences:
+    - What are you looking at? Don't get distracted, keep your eyes on the meeting
+      spot.
+    musics:
+    - 
+    sfxs:
+    - 
+    backgrounds:
+    - 
+    animations:
+    - 
+  dialoguenumber: 0
+  talkdialoguenumber: 0
+  scrutinizedialoguenumber: 0
+  investigatedialoguenumber: 0
+  movedialoguenumber: 0
+  GameManager: {fileID: 1799654814}
 --- !u!1 &1987239782
 GameObject:
   m_ObjectHideFlags: 0
@@ -3211,9 +3925,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1734917339}
-  - {fileID: 844496834}
   - {fileID: 1628369084}
   - {fileID: 1969492313}
+  - {fileID: 844496834}
   m_Father: {fileID: 847721167}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
