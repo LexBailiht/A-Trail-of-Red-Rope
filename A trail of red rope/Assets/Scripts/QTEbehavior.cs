@@ -10,9 +10,9 @@ public class QTEbehavior : MonoBehaviour
 {
     public GameObject QTE;
     private bool qteON;
-    private float TimerAmount = 2.5f;
+    private float TimerAmount = 2f;
     private float CurrentTimer;
-    private bool PassQTE;
+    public int PassQTE;
     public event EventHandler OnQTEwin;
 
 
@@ -31,21 +31,23 @@ public class QTEbehavior : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && CurrentTimer > 0)
             {
                 //if the button is pressed within the time frame this function will send out the QTEwin event 
-                PassQTE = true;
+                PassQTE = 1;
                 OnQTEwin?.Invoke(this, EventArgs.Empty);
                 QTE.SetActive(false);
                 Debug.Log("QTE WIN");
                 qteON = false;
+                gameObject.GetComponent<GameManager>().UpdateGameState();
             }
 
 
             CurrentTimer -= Time.deltaTime;
             if (Input.GetKeyDown(KeyCode.Space) && CurrentTimer < 0)
             {
-                PassQTE = false;
+                PassQTE = 2;
                 QTE.SetActive(false);
                 Debug.Log("QTE LOSE");
                 qteON = false;
+                gameObject.GetComponent<GameManager>().UpdateGameState();
             }
         }
     }

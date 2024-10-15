@@ -2792,6 +2792,877 @@ MonoBehaviour:
     - 
     - 
     - 
+  - dialogueidentifier: 3
+    button: talk
+    names:
+    - Barry
+    - Miles
+    - Mafia Thug 1
+    - Mafia Thug 2
+    - Mafia Thug 1
+    - Mafia Thug 2
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - Ricky?
+    - Mafia Thug 2
+    - Ricky
+    - Skully
+    - Ricky
+    - Skully
+    - Ricky
+    - Skully
+    - Miles
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - Miles
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - 
+    - Giovanni
+    - Skully
+    - Giovanni
+    - Skully
+    - Giovanni
+    - Giovanni
+    - 
+    - Giovanni
+    - Skully
+    - Giovanni
+    - Giovanni
+    - Miles
+    - Miles
+    - Miles
+    - Miles
+    - Miles
+    - Miles
+    - Miles
+    - Miles
+    - Miles
+    - Miles
+    - 
+    - 
+    - Miles
+    sentences:
+    - What do you hear?
+    - I think I can hear what they're saying.
+    - Is this the spot?
+    - Yeah, the big boss said he'd meet us here.
+    - How long we gotta wait?
+    - He said he'll ariive within the hour.
+    - Hey Miles, doesn't that guy look a hell of a lot like Ricky?
+    - Who's Ricky?
+    - Of course you wouldn't know, you're always cooped up in your office. He's one
+      of the new guys, joined up last year. I worked a case with him.
+    - Then what the hell is a cop like him doing all the way out here, and with the
+      Mafia no less?
+    - I'm not quite sure, it doesn't make any sense.
+    - Quiet Bear, they're speaking again.
+    - What are we meeting about anyway?
+    - Geez Ricky, you bonehead! We were told this in the mission brief. Boss said
+      not to talk about it either, you never know who's listening.
+    - Come on Skully, I don't want to look like an idiot in front of the boss. Throw
+      me a bone, man!
+    - Fine, I'll give you the rundown.
+    - Thanks man, I owe you big time.
+    - You can buy me a drink later to make up for it. Basically, the boss wants to
+      meet about the plans for the incoming shipiment.
+    - What shipment?
+    - I'm not saying any more. The boss will have my head if it gets leaked.
+    - This guy seems to know a lot about the shipment.
+    - Yeah definitely, more than he's letting on.
+    - Doesn't seem he's willing to give it up though.
+    - I can feel something is up with that guy, I can feel it in my bones.
+    - What do you mean?
+    - The way this Skully guy is speaking, it seems like he's a part of the upper
+      echelon. He may even have direct ties to Giovanni.
+    - Yeah I see, that makes a lot of sense.
+    - To get that high in the pecking order you need some major loyalty.
+    - And that loyalty might make it hard for us to get the info from him.
+    - Exactly.
+    - None of this explains why that Ricky kid is out there with him though. Surely
+      not... Don't tell me we have been working with an undercover mafia agent this
+      whole time?
+    - That seems most likely.
+    - Damn it!
+    - Calm down. We're going to have to lure that Skully guy away somehow.
+    - Why's that?
+    - We'd have a better chance of interrogating him one on one. And we need to get
+      him away from Ricky.
+    - Good point, maybe we can ask him why he's meeting up with the mafia.
+    - After we are finished interrogating Skully, though.
+    - Right, I'll keep watch, you go set up a distraction to lure him away. Once
+      you give me the signal I'll follow him over and we can corner him.
+    - Great, got any ideas?
+    - I'm thinking... how about a car alarm?
+    - Perfect. Good one, Bear.
+    - "Miles stealthily exits the car and finds a semi old car with a functioning
+      alarm still in viewing distance of the car barry is currently in and prepares
+      to set it off on Barry\u2019s signal, however unbeknownst to Miles, Giovanni
+      had just arrived with four cars full of mafia members, all carrying tommy guns. "
+    - Skully, Ricky. Good to see you are doing well.
+    - Good evening, Boss. How've ya been?
+    - I am well, now that the shipment is finally on its way. I can thank you for
+      that, Skully.
+    - Oh no, your praise isn't necessary, Boss. I was just doing my job.
+    - Now, before we get down to business. we have a problem we need to take care
+      of.
+    - Lisence plate AEV V83, light it up.
+    - With this command all of the men with tommy guns turned to the car Barry was
+      sitting in and sprayed the car with bullets. Miles could only watch in horror
+      as his partner, his best friend, was murdered before his eyes.
+    - Count the corpses, there should be two men in there.
+    - Sir, there's only one in here.
+    - One must have left the car, probably to set up a trap.
+    - Search the area, now!
+    - Barry...
+    - Why Barry? It should have been me!
+    - He had a family... I have nothing...
+    - But how did he know which car we were in?
+    - Get it together Miles, you need to get out of here or you will die too.
+    - But where can I go? They've blocked off all the exits!
+    - Come on, I must think!
+    - Could I swim..? I'll have to do it. It's my only option.
+    - Ack! I'm running out of time, I need to make a decision!
+    - Not yet. I can't leave without making him pay. One shot. This is the only chance
+      I have.
+    - 'With Miles sent into a panic after the death of his friend, and the Mafia
+      searching every inch of the dockyard. Miles was left with only one option for
+      escape. '
+    - To jump in the freezing cold water and swim away. He wasn't going without a
+      fight though, as he sprung up from where he was stationed and aimed his pistol
+      at Giovanni.
+    - GIOVANNI!!
+    musics:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - giovannitheme
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    sfxs:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    backgrounds:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    animations:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - giovanni
+    - 
+    - giovanni
+    - 
+    - giovanni
+    - 
+    - 
+    - giovanni
+    - 
+    - giovanni
+    - 
+    - miles
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - giovanni
+  - dialogueidentifier: 4
+    button: talk
+    names:
+    - Barry
+    - Miles
+    - Barry
+    - Mafia Thug 1
+    - Mafia Thug 2
+    - Mafia Thug 1
+    - Mafia Thug 2
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - Ricky?
+    - Mafia Thug 2
+    - Ricky
+    - Skully
+    - Ricky
+    - Skully
+    - Ricky
+    - Skully
+    - Miles
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - Miles
+    - Barry
+    - Miles
+    - Barry
+    - Miles
+    - 
+    - Giovanni
+    - Skully
+    - Giovanni
+    - Skully
+    - Giovanni
+    - Giovanni
+    - 
+    - Giovanni
+    - Skully
+    - Giovanni
+    - Giovanni
+    - Miles
+    - Miles
+    - Miles
+    - Miles
+    - Miles
+    - Miles
+    - Miles
+    - Miles
+    - Miles
+    - Miles
+    - 
+    - 
+    - Miles
+    sentences:
+    - What do you hear?
+    - It's no good, I can't make out what they're saying.
+    - You'll have to be faster next time. I can use my sonar scanner equipment on
+      this occasion though.
+    - Is this the spot?
+    - Yeah, the big boss said he'd meet us here.
+    - How long we gotta wait?
+    - He said he'll ariive within the hour.
+    - Hey Miles, doesn't that guy look a hell of a lot like Ricky?
+    - Who's Ricky?
+    - Of course you wouldn't know, you're always cooped up in your office. He's one
+      of the new guys, joined up last year. I worked a case with him.
+    - Then what the hell is a cop like him doing all the way out here, and with the
+      Mafia no less?
+    - I'm not quite sure, it doesn't make any sense.
+    - Quiet Bear, they're speaking again.
+    - What are we meeting about anyway?
+    - Geez Ricky, you bonehead! We were told this in the mission brief. Boss said
+      not to talk about it either, you never know who's listening.
+    - Come on Skully, I don't want to look like an idiot in front of the boss. Throw
+      me a bone, man!
+    - Fine, I'll give you the rundown.
+    - Thanks man, I owe you big time.
+    - You can buy me a drink later to make up for it. Basically, the boss wants to
+      meet about the plans for the incoming shipiment.
+    - What shipment?
+    - I'm not saying any more. The boss will have my head if it gets leaked.
+    - This guy seems to know a lot about the shipment.
+    - Yeah definitely, more than he's letting on.
+    - Doesn't seem he's willing to give it up though.
+    - I can feel something is up with that guy, I can feel it in my bones.
+    - What do you mean?
+    - The way this Skully guy is speaking, it seems like he's a part of the upper
+      echelon. He may even have direct ties to Giovanni.
+    - Yeah I see, that makes a lot of sense.
+    - To get that high in the pecking order you need some major loyalty.
+    - And that loyalty might make it hard for us to get the info from him.
+    - Exactly.
+    - None of this explains why that Ricky kid is out there with him though. Surely
+      not... Don't tell me we have been working with an undercover mafia agent this
+      whole time?
+    - That seems most likely.
+    - Damn it!
+    - Calm down. We're going to have to lure that Skully guy away somehow.
+    - Why's that?
+    - We'd have a better chance of interrogating him one on one. And we need to get
+      him away from Ricky.
+    - Good point, maybe we can ask him why he's meeting up with the mafia.
+    - After we are finished interrogating Skully, though.
+    - Right, I'll keep watch, you go set up a distraction to lure him away. Once
+      you give me the signal I'll follow him over and we can corner him.
+    - Great, got any ideas?
+    - I'm thinking... how about a car alarm?
+    - Perfect. Good one, Bear.
+    - "Miles stealthily exits the car and finds a semi old car with a functioning
+      alarm still in viewing distance of the car barry is currently in and prepares
+      to set it off on Barry\u2019s signal, however unbeknownst to Miles, Giovanni
+      had just arrived with four cars full of mafia members, all carrying tommy guns. "
+    - Skully, Ricky. Good to see you are doing well.
+    - Good evening, Boss. How've ya been?
+    - I am well, now that the shipment is finally on its way. I can thank you for
+      that, Skully.
+    - Oh no, your praise isn't necessary, Boss. I was just doing my job.
+    - Now, before we get down to business. we have a problem we need to take care
+      of.
+    - Lisence plate AEV V83, light it up.
+    - With this command all of the men with tommy guns turned to the car Barry was
+      sitting in and sprayed the car with bullets. Miles could only watch in horror
+      as his partner, his best friend, was murdered before his eyes.
+    - Count the corpses, there should be two men in there.
+    - Sir, there's only one in here.
+    - One must have left the car, probably to set up a trap.
+    - Search the area, now!
+    - Barry...
+    - Why Barry? It should have been me!
+    - He had a family... I have nothing...
+    - But how did he know which car we were in?
+    - Get it together Miles, you need to get out of here or you will die too.
+    - But where can I go? They've blocked off all the exits!
+    - Come on, I must think!
+    - Could I swim..? I'll have to do it. It's my only option.
+    - Ack! I'm running out of time, I need to make a decision!
+    - Not yet. I can't leave without making him pay. One shot. This is the only chance
+      I have.
+    - 'With Miles sent into a panic after the death of his friend, and the Mafia
+      searching every inch of the dockyard. Miles was left with only one option for
+      escape. '
+    - To jump in the freezing cold water and swim away. He wasn't going without a
+      fight though, as he sprung up from where he was stationed and aimed his pistol
+      at Giovanni.
+    - GIOVANNI!!
+    musics:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - giovannitheme
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    sfxs:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    backgrounds:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    animations:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - giovanni
+    - 
+    - giovanni
+    - 
+    - giovanni
+    - 
+    - 
+    - giovanni
+    - 
+    - giovanni
+    - 
+    - miles
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - giovanni
   dialoguenumber: 0
   talkdialoguenumber: 0
   scrutinizedialoguenumber: 0
@@ -3081,6 +3952,7 @@ MonoBehaviour:
   InvestigateLastDialogueNumber: 0
   MoveDialogueNumber: 0
   MoveLastDialogueNumber: 0
+  TalkButton: {fileID: 1734917338}
 --- !u!114 &1799654818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3094,6 +3966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QTE: {fileID: 346968312}
+  PassQTE: 0
 --- !u!1 &1816397454
 GameObject:
   m_ObjectHideFlags: 0

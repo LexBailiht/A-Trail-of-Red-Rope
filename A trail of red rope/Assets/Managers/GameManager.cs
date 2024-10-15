@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -14,6 +15,9 @@ public class GameManager : MonoBehaviour
     public int InvestigateLastDialogueNumber = 0;
     public int MoveDialogueNumber = 0;
     public int MoveLastDialogueNumber = 0;
+
+    private int QTEResult;
+    public GameObject TalkButton;
     void Start()
     {
         
@@ -30,5 +34,20 @@ public class GameManager : MonoBehaviour
         {
             TalkDialogueNumber = 1;
         }
+
+        QTEResult = gameObject.GetComponent<QTEbehavior>().PassQTE;
+        if (QTEResult == 1 && TalkLastDialogueNumber == 2)
+        {
+            TalkDialogueNumber = 2;
+            TalkButton.GetComponent<DialogueTrigger>().TriggerDialogue();
+            gameObject.GetComponent<QTEbehavior>().PassQTE = 0;
+        }
+        if (QTEResult == 2 && TalkLastDialogueNumber == 2)
+        {
+            TalkDialogueNumber = 3;
+            TalkButton.GetComponent<DialogueTrigger>().TriggerDialogue();
+            gameObject.GetComponent<QTEbehavior>().PassQTE = 0;
+        }
     }
+
 }
