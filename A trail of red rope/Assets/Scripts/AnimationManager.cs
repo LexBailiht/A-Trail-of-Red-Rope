@@ -7,6 +7,8 @@ public class AnimationManager : MonoBehaviour
     public GameObject Miles;
     public GameObject Barry;
     public GameObject Giovanni;
+    public GameObject Ricky;
+    public GameObject Skully;
     private GameObject SelectedAnimation;
     // Start is called before the first frame update
     void Start()
@@ -14,6 +16,8 @@ public class AnimationManager : MonoBehaviour
         Miles.SetActive(false);
         Barry.SetActive(false);
         Giovanni.SetActive(false);
+        Ricky.SetActive(false);
+        Skully.SetActive(false);
         SelectedAnimation = Miles;
     }
 
@@ -31,6 +35,14 @@ public class AnimationManager : MonoBehaviour
         if (animation == "giovanni")
         {
             SelectedAnimation = Giovanni;
+        }
+        if (animation == "ricky")
+        {
+            SelectedAnimation = Ricky;
+        }
+        if (animation == "skully")
+        {
+            SelectedAnimation = Skully;
         }
 
         SelectedAnimation.SetActive(true);

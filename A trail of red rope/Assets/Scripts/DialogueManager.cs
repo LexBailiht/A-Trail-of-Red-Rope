@@ -9,6 +9,10 @@ public class DialogueManager : MonoBehaviour
 
     public TextMeshProUGUI DialogueBox;
     public TextMeshProUGUI NameBox;
+    public float delay = 0.0175f;
+    public bool SpedUp = false;
+    public bool AutoContinue = false;
+    public bool DefaultAutoContinue = false;
     public GameObject ContinueIcon;
     public GameObject GameManager;
     private Queue<string> sentences;
@@ -128,11 +132,42 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             DialogueBox.text += letter; 
-            yield return new WaitForSeconds(0.025f);
+            yield return new WaitForSeconds(delay);
+        }
+        if (SpedUp == true)
+        {
+            yield return new WaitForSeconds(delay * 10);
         }
         ContinueIcon.SetActive(true);
+        if (AutoContinue == true)
+        {
+            DisplayNextSentence();
+        }
     }
-
+    public void OnClick()
+    {
+        if (ContinueIcon.activeInHierarchy == true )
+        {
+            DisplayNextSentence();
+        }
+        AutoContinue = true;
+        Invoke("SpeedUp", 0.25f);  
+    }
+    public void OnRelease()
+    {
+        CancelInvoke("SpeedUp");
+        if (SpedUp == true)
+        {
+            delay *= 2f;
+        }
+        AutoContinue = DefaultAutoContinue;
+        SpedUp = false;
+    }
+    void SpeedUp()
+    {
+        delay /= 2f;
+        SpedUp = true;
+    }
     void EndDialogue()
     {
         ContinueIcon.SetActive(false);
