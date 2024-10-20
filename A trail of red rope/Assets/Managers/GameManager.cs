@@ -15,12 +15,34 @@ public class GameManager : MonoBehaviour
     public int InvestigateLastDialogueNumber = 0;
     public int MoveDialogueNumber = 0;
     public int MoveLastDialogueNumber = 0;
+    public GameObject SettingsMenu;
+    public Animator settingsanimator;
+    public bool SettingsState = false;
+    public AudioSource AudioSource;
 
     private int QTEResult;
     public GameObject TalkButton;
     void Start()
     {
         
+    }
+
+    public void ToggleSettings()
+    {
+        if (SettingsState == false)
+        {
+            SettingsState = true;
+            settingsanimator.SetBool("IsOpen", true);
+            Time.timeScale = 0f;
+            AudioListener.pause = true;
+        } else
+        {
+            SettingsState = false;
+            settingsanimator.SetBool("IsOpen", false);
+            Time.timeScale = 1f;
+            AudioListener.pause = false;
+
+        }
     }
 
     void Update()

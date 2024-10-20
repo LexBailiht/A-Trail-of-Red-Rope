@@ -10,8 +10,10 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI DialogueBox;
     public TextMeshProUGUI NameBox;
     public float delay = 0.0175f;
+    public Slider DelaySlider;
     public bool SpedUp = false;
     public bool AutoContinue = false;
+    public Toggle AutoContinueToggle;
     public bool DefaultAutoContinue = false;
     public GameObject ContinueIcon;
     public GameObject GameManager;
@@ -93,56 +95,75 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if (sentences.Count == 0)
+        if (GameManager.GetComponent<GameManager>().SettingsState != true)
         {
-            EndDialogue();
-            return;
+            if (sentences.Count == 0)
+            {
+                EndDialogue();
+                return;
+            }
+            string sentence = sentences.Dequeue();
+            string name = names.Dequeue();
+            string sfx = sfxs.Dequeue();
+            string music = musics.Dequeue();
+            string background = backgrounds.Dequeue();
+            string animation = animations.Dequeue();
+            StopAllCoroutines();
+            NameBox.text = name;
+            if (sfx != string.Empty)
+            {
+                BroadcastMessage("PlaySoundEffect", sfx);
+            }
+            if (music != string.Empty)
+            {
+                BroadcastMessage("PlayMusic", music);
+            }
+            if (background != string.Empty)
+            {
+                BroadcastMessage("SetBackground", background);
+            }
+            if (animation != string.Empty)
+            {
+                BroadcastMessage("SetAnimation", animation);
+            }
+            StartCoroutine(TypeSentence(sentence));
         }
-        string sentence = sentences.Dequeue();
-        string name = names.Dequeue();
-        string sfx = sfxs.Dequeue();
-        string music = musics.Dequeue();
-        string background = backgrounds.Dequeue();
-        string animation = animations.Dequeue();
-        StopAllCoroutines();
-        NameBox.text = name;
-        if (sfx != string.Empty)
-        {
-            BroadcastMessage("PlaySoundEffect", sfx);
-        }
-        if (music != string.Empty)
-        {
-            BroadcastMessage("PlayMusic", music);
-        }
-        if (background != string.Empty)
-        {
-            BroadcastMessage("SetBackground", background);
-        }
-        if (animation != string.Empty)
-        {
-            BroadcastMessage("SetAnimation", animation);
-        }
-        StartCoroutine(TypeSentence(sentence));
     }
 
     IEnumerator TypeSentence (string sentence)
     {
-        ContinueIcon.SetActive(false);
-        DialogueBox.text = "";
-        foreach (char letter in sentence.ToCharArray())
+            ContinueIcon.SetActive(false);
+            DialogueBox.text = "";
+            foreach (char letter in sentence.ToCharArray())
+            {
+                DialogueBox.text += letter;
+                yield return new WaitForSeconds(delay);
+            }
+            if (AutoContinue == true)
+            {
+                yield return new WaitForSeconds(delay * 30);
+            }
+            ContinueIcon.SetActive(true);
+            if (AutoContinue == true)
+            {
+                DisplayNextSentence();
+            }
+    }
+
+    public void ToggleAutoContinue()
+    {
+        if (AutoContinueToggle.isOn == true)
         {
-            DialogueBox.text += letter; 
-            yield return new WaitForSeconds(delay);
-        }
-        if (SpedUp == true)
+            DefaultAutoContinue = true;
+        } else
         {
-            yield return new WaitForSeconds(delay * 10);
+            DefaultAutoContinue = false;
         }
-        ContinueIcon.SetActive(true);
-        if (AutoContinue == true)
-        {
-            DisplayNextSentence();
-        }
+        AutoContinue = DefaultAutoContinue;
+    }
+    public void OnDelayChanged()
+    {
+        delay = DelaySlider.value;
     }
     public void OnClick()
     {
