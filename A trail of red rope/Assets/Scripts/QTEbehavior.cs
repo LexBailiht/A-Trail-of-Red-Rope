@@ -10,7 +10,7 @@ public class QTEbehavior : MonoBehaviour
 {
     public GameObject QTE;
     private bool qteON;
-    private float TimerAmount = 2f;
+    private float TimerAmount = 1f;
     private float CurrentTimer;
     public int PassQTE;
     public event EventHandler OnQTEwin;
@@ -20,6 +20,7 @@ public class QTEbehavior : MonoBehaviour
     void Start()
     {
         QTE.SetActive(false);
+        PassQTE = 0;
     }
 
     // Update is called once per frame
