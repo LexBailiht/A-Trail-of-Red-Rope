@@ -21,6 +21,7 @@ public class QTEbehavior : MonoBehaviour
     {
         QTE.SetActive(false);
         PassQTE = 0;
+        qteON = false;
     }
 
     // Update is called once per frame

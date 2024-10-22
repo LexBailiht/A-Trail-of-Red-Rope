@@ -2,10 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-<<<<<<< Updated upstream
 using UnityEngine.UI;
-=======
->>>>>>> Stashed changes
 using TMPro;
 
 public class GameManager : MonoBehaviour
