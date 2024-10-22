@@ -15,8 +15,10 @@ public class DialogueManager : MonoBehaviour
     public bool AutoContinue = false;
     public Toggle AutoContinueToggle;
     public bool DefaultAutoContinue = false;
+    public bool SkipCurrentSentence = false;
     public GameObject ContinueIcon;
     public GameObject GameManager;
+    public AudioSource SFXAudioSource;
     private Queue<string> sentences;
     private Queue<string> names;
     private Queue<string> sfxs;
@@ -137,13 +139,26 @@ public class DialogueManager : MonoBehaviour
             foreach (char letter in sentence.ToCharArray())
             {
                 DialogueBox.text += letter;
+            if (letter == ' ' && SFXAudioSource.GetComponent<AudioSource>().isPlaying != true)
+            {
+                SFXAudioSource.GetComponent<SFXmanager>().PlaySoundEffect("blipmale");
+            }
+
+            if (SkipCurrentSentence == true)
+            {
+                yield return new WaitForSeconds(delay/8);
+            }
+            else
+            {
                 yield return new WaitForSeconds(delay);
+            }
             }
             if (AutoContinue == true)
             {
                 yield return new WaitForSeconds(delay * 30);
             }
             ContinueIcon.SetActive(true);
+            SkipCurrentSentence = false;
             if (AutoContinue == true)
             {
                 DisplayNextSentence();
@@ -170,23 +185,27 @@ public class DialogueManager : MonoBehaviour
         if (ContinueIcon.activeInHierarchy == true )
         {
             DisplayNextSentence();
+        } else
+        {
+            SkipCurrentSentence = true;
         }
-        AutoContinue = true;
         Invoke("SpeedUp", 0.25f);  
     }
     public void OnRelease()
     {
         CancelInvoke("SpeedUp");
-        if (SpedUp == true)
-        {
-            delay *= 2f;
-        }
+        delay = DelaySlider.value;
         AutoContinue = DefaultAutoContinue;
         SpedUp = false;
     }
     void SpeedUp()
     {
-        delay /= 2f;
+        AutoContinue = true;
+        if (ContinueIcon.activeInHierarchy == true)
+        {
+            DisplayNextSentence();
+        }
+        delay = DelaySlider.value / 2;
         SpedUp = true;
     }
     void EndDialogue()

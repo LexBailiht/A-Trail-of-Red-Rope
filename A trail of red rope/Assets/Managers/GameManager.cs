@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public Animator settingsanimator;
     public bool SettingsState = false;
     public AudioSource AudioSource;
+    public AudioSource SFXAudioSource;
 
     private int QTEResult;
     public GameObject TalkButton;
@@ -32,22 +33,32 @@ public class GameManager : MonoBehaviour
         if (SettingsState == false)
         {
             SettingsState = true;
+            SFXAudioSource.GetComponent<SFXmanager>().PlaySoundEffect("settingsopen");
             settingsanimator.SetBool("IsOpen", true);
             Time.timeScale = 0f;
-            AudioListener.pause = true;
+            AudioSource.Pause();
         } else
         {
             SettingsState = false;
             settingsanimator.SetBool("IsOpen", false);
             Time.timeScale = 1f;
-            AudioListener.pause = false;
+            SFXAudioSource.GetComponent<SFXmanager>().PlaySoundEffect("cancel");
+            AudioSource.Play();
 
         }
     }
 
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ToggleSettings();
+        }
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
     public void UpdateGameState()

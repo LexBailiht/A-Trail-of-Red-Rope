@@ -7,6 +7,8 @@ public class SFXmanager : MonoBehaviour
     public AudioSource AudioSource;
     public AudioClip settingsopen;
     public AudioClip cancel;
+    public AudioClip blipmale;
+    public AudioClip blipfemale;
     private AudioClip selectedSFX;
     // Start is called before the first frame update
     void Start()
@@ -17,13 +19,21 @@ public class SFXmanager : MonoBehaviour
 
     public void PlaySoundEffect(string sfx)
     {
-        if (sfx == "shadydealings")
+        if (sfx == "settingsopen")
         {
             selectedSFX = settingsopen;
         }
-        if (sfx == "giovannitheme")
+        if (sfx == "cancel")
         {
             selectedSFX = cancel;
+        }
+        if (sfx == "blipmale")
+        {
+            selectedSFX = blipmale;
+        }
+        if (sfx == "blipfemale")
+        {
+            selectedSFX = blipfemale;
         }
         AudioSource.clip = selectedSFX;
         AudioSource.Play();
