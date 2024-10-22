@@ -20,12 +20,10 @@ public class OSTchanger : MonoBehaviour
         if (music == "shadydealings")
         {
             selectedOST = ShadyDealings;
-            AudioSource.volume = 1f;
         }
         if (music == "giovannitheme")
         {
             selectedOST = GiovanniTheme;
-            AudioSource.volume = 0.6f;
         }
         AudioSource.clip = selectedOST;
         AudioSource.Play();

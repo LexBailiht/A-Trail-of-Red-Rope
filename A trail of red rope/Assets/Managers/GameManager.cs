@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,6 +22,12 @@ public class GameManager : MonoBehaviour
     public bool SettingsState = false;
     public AudioSource AudioSource;
     public AudioSource SFXAudioSource;
+    public float MasterVolume = 0.5f;
+    public Slider MasterVolumeSlider;
+    public float MusicVolume = 0.5f;
+    public Slider MusicVolumeSlider;
+    public float SFXVolume = 0.125f;
+    public Slider SFXVolumeSlider;
 
     private int QTEResult;
     public GameObject TalkButton;
@@ -46,6 +54,23 @@ public class GameManager : MonoBehaviour
             AudioSource.Play();
 
         }
+    }
+
+    public void UpdateMasterVolume()
+    {
+        MasterVolume = MasterVolumeSlider.value;
+        AudioSource.volume = MusicVolume * MasterVolume;
+        SFXAudioSource.volume = SFXVolume * MasterVolume;
+    }
+    public void UpdateMusicVolume()
+    {
+        MusicVolume = MusicVolumeSlider.value;
+        AudioSource.volume = MusicVolume * MasterVolume;
+    }
+    public void UpdateSFXVolume()
+    {
+        SFXVolume = SFXVolumeSlider.value;
+        SFXAudioSource.volume = SFXVolume * MasterVolume;
     }
 
     void Update()
