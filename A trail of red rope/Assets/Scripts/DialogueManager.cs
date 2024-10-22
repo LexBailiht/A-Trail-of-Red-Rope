@@ -178,7 +178,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void OnDelayChanged()
     {
-        delay = DelaySlider.value;
+        delay = DelaySlider.value; 
     }
     public void OnClick()
     {

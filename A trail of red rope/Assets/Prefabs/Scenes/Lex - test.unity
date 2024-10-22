@@ -5079,7 +5079,7 @@ MonoBehaviour:
   DialogueBox: {fileID: 9809499}
   NameBox: {fileID: 1816397456}
   delay: 0.025
-  DelaySlider: {fileID: 0}
+  DelaySlider: {fileID: 1978027108}
   SpedUp: 0
   AutoContinue: 0
   AutoContinueToggle: {fileID: 1577736975}
@@ -8416,12 +8416,12 @@ RectTransform:
   - {fileID: 2110462278}
   - {fileID: 1116319092}
   - {fileID: 1124385723}
-  - {fileID: 1847717204}
+  - {fileID: 1978027109}
   - {fileID: 610033722}
   - {fileID: 1790268552}
   - {fileID: 1577736974}
   - {fileID: 731839676}
-  - {fileID: 1978027109}
+  - {fileID: 1847717204}
   - {fileID: 242428640}
   - {fileID: 215200529}
   - {fileID: 560418281}
@@ -10474,7 +10474,7 @@ MonoBehaviour:
   AudioSource: {fileID: 228184041}
   SFXAudioSource: {fileID: 472663337}
   MasterVolume: 0.5
-  MasterVolumeSlider: {fileID: 1978027108}
+  MasterVolumeSlider: {fileID: 1847717205}
   MusicVolume: 0.5
   MusicVolumeSlider: {fileID: 215200528}
   SFXVolume: 0.25
@@ -10714,7 +10714,7 @@ GameObject:
   - component: {fileID: 1847717204}
   - component: {fileID: 1847717205}
   m_Layer: 5
-  m_Name: TextSpeedSlider
+  m_Name: MasterVolumeSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11948,7 +11948,7 @@ GameObject:
   - component: {fileID: 1978027109}
   - component: {fileID: 1978027108}
   m_Layer: 5
-  m_Name: MasterVolumeSlider
+  m_Name: TextSpeedSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
