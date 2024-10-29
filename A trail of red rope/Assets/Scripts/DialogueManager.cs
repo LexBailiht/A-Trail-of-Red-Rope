@@ -8,6 +8,7 @@ public class DialogueManager : MonoBehaviour
 {
 
     public TextMeshProUGUI DialogueBox;
+    public GameObject NameBoxBox;
     public TextMeshProUGUI NameBox;
     public float delay = 0.0175f;
     public Slider DelaySlider;
@@ -112,6 +113,14 @@ public class DialogueManager : MonoBehaviour
             string animation = animations.Dequeue();
             StopAllCoroutines();
             NameBox.text = name;
+            if (name.Length == 0)
+            { 
+                NameBoxBox.SetActive(false);
+            }
+            else
+            {
+                NameBoxBox.SetActive(true);
+            }
             if (sfx != string.Empty)
             {
                 BroadcastMessage("PlaySoundEffect", sfx);
