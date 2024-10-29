@@ -9,7 +9,7 @@ public class AnimationManager : MonoBehaviour
     public GameObject Giovanni;
     public GameObject Ricky;
     public GameObject Skully;
-    private GameObject SelectedAnimation;
+    public GameObject SelectedAnimation;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +45,10 @@ public class AnimationManager : MonoBehaviour
             SelectedAnimation = Skully;
         }
 
+        SelectedAnimation.SetActive(true);
+    }
+    public void LoadAnimation()
+    {
         SelectedAnimation.SetActive(true);
     }
 }

@@ -30,7 +30,9 @@ public class DialogueManager : MonoBehaviour
     public Animator animator;
     public GameObject ButtonPanel;
     public int CurrentDialogue;
+    public Dialogue Dialogue;
     private int LengthOfQueue;
+    public GameObject PlayButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,7 +46,9 @@ public class DialogueManager : MonoBehaviour
     }
     
     public void StartDialogue (Dialogue dialogue)
-    {
+    {   
+        PlayButton.SetActive (false);  
+        Dialogue = dialogue;
         GameManager.GetComponent<GameManager>().LastDialogueNumber = dialogue.dialogueidentifier;
         if (dialogue.button == "talk")
         {
@@ -105,7 +109,7 @@ public class DialogueManager : MonoBehaviour
     public void GoToLastDialogueState()
     {
         LengthOfQueue = sentences.Count;
-        for (int i = 0; i < CurrentDialogue; i++)
+        for (int i = 0; i < (CurrentDialogue-1); i++)
         {
             sentences.Dequeue();
             names.Dequeue();
@@ -118,8 +122,8 @@ public class DialogueManager : MonoBehaviour
     }
     public void DisplayNextSentence()
     {
-        if (GameManager.GetComponent<GameManager>().SettingsState != true)
-        {
+        //if (GameManager.GetComponent<GameManager>().SettingsState != true)
+        //{
             CurrentDialogue += 1;
             if (sentences.Count == 0)
             {
@@ -159,7 +163,7 @@ public class DialogueManager : MonoBehaviour
                 BroadcastMessage("SetAnimation", animation);
             }
             StartCoroutine(TypeSentence(sentence));
-        }
+       // }
     }
 
     IEnumerator TypeSentence (string sentence)
@@ -189,7 +193,7 @@ public class DialogueManager : MonoBehaviour
             }
             ContinueIcon.SetActive(true);
             SkipCurrentSentence = false;
-            if (AutoContinue == true)
+            if (AutoContinue == true && GameManager.GetComponent<GameManager>().SettingsState != true)
             {
                 DisplayNextSentence();
             }
@@ -212,7 +216,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void OnClick()
     {
-        if (ContinueIcon.activeInHierarchy == true )
+        if (ContinueIcon.activeInHierarchy == true && GameManager.GetComponent<GameManager>().SettingsState != true)
         {
             DisplayNextSentence();
         } else
@@ -231,15 +235,16 @@ public class DialogueManager : MonoBehaviour
     void SpeedUp()
     {
         AutoContinue = true;
-        if (ContinueIcon.activeInHierarchy == true)
+        if (ContinueIcon.activeInHierarchy == true && GameManager.GetComponent<GameManager>().SettingsState != true)
         {
             DisplayNextSentence();
         }
         delay = DelaySlider.value / 2;
         SpedUp = true;
     }
-    void EndDialogue()
+    public void EndDialogue()
     {
+        PlayButton.gameObject.SetActive(false);
         CurrentDialogue = 0;
         ContinueIcon.SetActive(false);
         animator.SetBool("IsOpen", false);

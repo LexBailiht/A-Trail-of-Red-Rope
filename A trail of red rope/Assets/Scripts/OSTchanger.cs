@@ -7,7 +7,7 @@ public class OSTchanger : MonoBehaviour
     public AudioSource AudioSource;
     public AudioClip ShadyDealings;
     public AudioClip GiovanniTheme;
-    private AudioClip selectedOST;
+    public AudioClip selectedOST;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,4 +29,9 @@ public class OSTchanger : MonoBehaviour
         AudioSource.Play();
     }
 
+    public void LoadMusic()
+    {
+        AudioSource.clip = selectedOST;
+       // AudioSource.Play();
+    }
 }

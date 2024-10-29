@@ -7,7 +7,7 @@ public class BackgroundManager : MonoBehaviour
     public GameObject HarbourBackground;
     public GameObject OfficeBackground;
 
-    private GameObject SelectedBackground;
+    public GameObject SelectedBackground;
     // Start is called before the first frame update
 
     private void Start()
@@ -25,6 +25,10 @@ public class BackgroundManager : MonoBehaviour
         {
             SelectedBackground = OfficeBackground;
         }
+        SelectedBackground.SetActive(true);
+    }
+    public void LoadBackground()
+    {
         SelectedBackground.SetActive(true);
     }
 }

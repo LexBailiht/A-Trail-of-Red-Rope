@@ -10,7 +10,7 @@ public class SFXmanager : MonoBehaviour
     public AudioClip blipmale;
     public AudioClip blipfemale;
     public AudioClip selectblip;
-    private AudioClip selectedSFX;
+    public AudioClip selectedSFX;
     // Start is called before the first frame update
     void Start()
     {

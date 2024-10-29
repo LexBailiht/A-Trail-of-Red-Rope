@@ -23,6 +23,7 @@ public class DialogueTrigger : MonoBehaviour
             if (gameObject.tag == "talk")
             {
                 FindObjectOfType<DialogueManager>().StartDialogue(dialogue[talkdialoguenumber]);
+                
             }
             if (gameObject.tag == "scrutinize")
             {
@@ -37,7 +38,9 @@ public class DialogueTrigger : MonoBehaviour
                 FindObjectOfType<DialogueManager>().StartDialogue(dialogue[movedialoguenumber]);
             }
             if (gameObject.tag != "talk" && gameObject.tag != "scrutinize" && gameObject.tag != "investigate" && gameObject.tag != "move")
-                FindObjectOfType<DialogueManager>().StartDialogue(dialogue[dialoguenumber]);
+            { 
+                FindObjectOfType<DialogueManager>().StartDialogue(dialogue[dialoguenumber]); 
+            }
             if (gameObject.tag == "playbutton")
             {
                 gameObject.SetActive(false);
