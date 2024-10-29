@@ -9,6 +9,7 @@ TagManager:
   - scrutinize
   - investigate
   - move
+  - SFX
   layers:
   - Default
   - TransparentFX

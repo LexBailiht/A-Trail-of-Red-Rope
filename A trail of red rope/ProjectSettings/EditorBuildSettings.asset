@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Prefabs/Scenes/Lex - test.unity
     guid: 1b70b5cf7ea1f274a8f60409a34d4313
+  - enabled: 1
+    path: Assets/Scenes/DemoEnd.unity
+    guid: e683376edc7029141a6be8dbc4d1f568
   m_configObjects: {}

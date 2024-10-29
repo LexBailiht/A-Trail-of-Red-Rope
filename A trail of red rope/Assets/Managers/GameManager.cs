@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
     public int MoveDialogueNumber = 0;
     public int MoveLastDialogueNumber = 0;
     public GameObject SettingsMenu;
+    public Button NotebookButton;
     public Animator settingsanimator;
     public bool SettingsState = false;
     public AudioSource AudioSource;
@@ -25,8 +27,10 @@ public class GameManager : MonoBehaviour
     public float MasterVolume = 0.5f;
     public Slider MasterVolumeSlider;
     public float MusicVolume = 0.5f;
+    public float MusicVolumeOut = 0.5f;
     public Slider MusicVolumeSlider;
     public float SFXVolume = 0.125f;
+    public float SFXVolumeOut = 0.125f;
     public Slider SFXVolumeSlider;
 
     private int QTEResult;
@@ -36,7 +40,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     public void ToggleSettings()
@@ -47,12 +51,14 @@ public class GameManager : MonoBehaviour
             SFXAudioSource.GetComponent<SFXmanager>().PlaySoundEffect("settingsopen");
             settingsanimator.SetBool("IsOpen", true);
             Time.timeScale = 0f;
+            NotebookButton.enabled = false;
             AudioSource.Pause();
         } else
         {
             SettingsState = false;
             settingsanimator.SetBool("IsOpen", false);
             Time.timeScale = 1f;
+            NotebookButton.enabled = true;
             SFXAudioSource.GetComponent<SFXmanager>().PlaySoundEffect("cancel");
             AudioSource.Play();
 
@@ -64,6 +70,7 @@ public class GameManager : MonoBehaviour
         MasterVolume = MasterVolumeSlider.value;
         AudioSource.volume = MusicVolume * MasterVolume;
         SFXAudioSource.volume = SFXVolume * MasterVolume;
+        SFXVolumeOut = SFXAudioSource.volume;
     }
     public void UpdateMusicVolume()
     {
@@ -74,6 +81,7 @@ public class GameManager : MonoBehaviour
     {
         SFXVolume = SFXVolumeSlider.value;
         SFXAudioSource.volume = SFXVolume * MasterVolume;
+        SFXVolumeOut = SFXAudioSource.volume;
     }
 
     void Update()
@@ -109,6 +117,11 @@ public class GameManager : MonoBehaviour
             TalkButton.GetComponent<DialogueTrigger>().TriggerDialogue();
             gameObject.GetComponent<QTEbehavior>().PassQTE = 0;
         }
+    }
+
+    public void EndDemo()
+    {
+        SceneManager.LoadScene(sceneName: "DemoEnd");
     }
 
 }

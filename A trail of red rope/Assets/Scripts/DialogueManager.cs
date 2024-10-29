@@ -217,6 +217,10 @@ public class DialogueManager : MonoBehaviour
         {
             GameManager.GetComponent<QTEbehavior>().QuickTimeEvent();
         }
+        else if (GameManager.GetComponent<GameManager>().TalkLastDialogueNumber == 3 || GameManager.GetComponent<GameManager>().TalkLastDialogueNumber == 4)
+        {
+            GameManager.GetComponent<GameManager>().EndDemo();
+        }
         else
         {
             ButtonPanel.SetActive(true);
