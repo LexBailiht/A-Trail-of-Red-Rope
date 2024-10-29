@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -20,14 +21,16 @@ public class DialogueManager : MonoBehaviour
     public GameObject ContinueIcon;
     public GameObject GameManager;
     public AudioSource SFXAudioSource;
-    private Queue<string> sentences;
-    private Queue<string> names;
-    private Queue<string> sfxs;
-    private Queue<string> musics;
-    private Queue<string> backgrounds;
-    private Queue<string> animations;
+    public Queue<string> sentences;
+    public Queue<string> names;
+    public Queue<string> sfxs;
+    public Queue<string> musics;
+    public Queue<string> backgrounds;
+    public Queue<string> animations;
     public Animator animator;
     public GameObject ButtonPanel;
+    public int CurrentDialogue;
+    private int LengthOfQueue;
     // Start is called before the first frame update
     void Start()
     {
@@ -93,13 +96,31 @@ public class DialogueManager : MonoBehaviour
         {
             animations.Enqueue(animation);
         }
+        if (CurrentDialogue > 0)
+        {
+            GoToLastDialogueState();
+        }
         DisplayNextSentence();
     }
+    public void GoToLastDialogueState()
+    {
+        LengthOfQueue = sentences.Count;
+        for (int i = 0; i < CurrentDialogue; i++)
+        {
+            sentences.Dequeue();
+            names.Dequeue();
+            sfxs.Dequeue();
+            musics.Dequeue();
+            backgrounds.Dequeue();
+            animations.Dequeue();
+        }
 
+    }
     public void DisplayNextSentence()
     {
         if (GameManager.GetComponent<GameManager>().SettingsState != true)
         {
+            CurrentDialogue += 1;
             if (sentences.Count == 0)
             {
                 EndDialogue();
@@ -219,6 +240,7 @@ public class DialogueManager : MonoBehaviour
     }
     void EndDialogue()
     {
+        CurrentDialogue = 0;
         ContinueIcon.SetActive(false);
         animator.SetBool("IsOpen", false);
         Debug.Log("End of conversation.");
