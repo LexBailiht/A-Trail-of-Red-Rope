@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2886379520063431537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8352379848060650188}
+  - component: {fileID: 5425688864272729397}
+  - component: {fileID: 3997940038397489737}
+  - component: {fileID: 8789818572528957964}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8352379848060650188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2886379520063431537}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1345.2445, y: 292.86557, z: -8.743689}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5425688864272729397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2886379520063431537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c525f32d603f9d045bd2ad080e0de5a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueNumber: 0
+  LastDialogueNumber: 0
+  TalkDialogueNumber: 0
+  TalkLastDialogueNumber: 0
+  ScrutinizeDialogueNumber: 0
+  ScrutinizeLastDialogueNumber: 0
+  InvestigateDialogueNumber: 0
+  InvestigateLastDialogueNumber: 0
+  MoveDialogueNumber: 0
+  MoveLastDialogueNumber: 0
+  SettingsMenu: {fileID: 0}
+  NotebookButton: {fileID: 0}
+  settingsanimator: {fileID: 0}
+  SettingsState: 0
+  AudioSource: {fileID: 0}
+  SFXAudioSource: {fileID: 0}
+  MasterVolume: 0.5
+  MasterVolumeSlider: {fileID: 0}
+  MusicVolume: 0.5
+  MusicVolumeOut: 0.5
+  MusicVolumeSlider: {fileID: 0}
+  SFXVolume: 0.25
+  SFXVolumeOut: 0.125
+  SFXVolumeSlider: {fileID: 0}
+  TalkButton: {fileID: 0}
+--- !u!114 &3997940038397489737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2886379520063431537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1095e1bc9ab0ff47a8c49cf6aa66c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 5425688864272729397}
+  OSTManager: {fileID: 0}
+  SFXManager: {fileID: 0}
+  BackgroundManager: {fileID: 0}
+  AnimationManager: {fileID: 0}
+  DialogueManager: {fileID: 0}
+  path: 
+  loadedGameStateData:
+    selectedSFX: {fileID: 0}
+    selectedOST: {fileID: 0}
+    DialogueNumber: 0
+    LastDialogueNumber: 0
+    TalkDialogueNumber: 0
+    TalkLastDialogueNumber: 0
+    ScrutinizeDialogueNumber: 0
+    ScrutinizeLastDialogueNumber: 0
+    InvestigateDialogueNumber: 0
+    InvestigateLastDialogueNumber: 0
+    MoveDialogueNumber: 0
+    MoveLastDialogueNumber: 0
+    SelectedAnimation: {fileID: 0}
+    SelectedBackground: {fileID: 0}
+    CurrentDialogue: 0
+    Dialogue:
+      dialogueidentifier: 0
+      button: 
+      names: []
+      sentences: []
+      musics: []
+      sfxs: []
+      backgrounds: []
+      animations: []
+--- !u!114 &8789818572528957964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2886379520063431537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54c9ae76eacb70845bb84ef80146b3c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QTE: {fileID: 0}
+  PassQTE: 0

@@ -11,4 +11,8 @@ public class QuitScript : MonoBehaviour
             Application.Quit();
         }
     }
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

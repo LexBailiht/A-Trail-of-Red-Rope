@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Save : MonoBehaviour
 {
@@ -44,6 +46,7 @@ public class Save : MonoBehaviour
     }
     public void LoadGame(GameManager gameManager, GameObject OSTManager, GameObject SFXManager, GameObject BackgroundManager, GameObject AnimationManager, GameObject DialogueManager)
     {
+        //SceneManager.LoadScene("Lex - test");
         gameManager.DialogueNumber = loadedGameStateData.DialogueNumber;
         gameManager.LastDialogueNumber = loadedGameStateData.LastDialogueNumber;
         gameManager.TalkDialogueNumber = loadedGameStateData.TalkDialogueNumber;
