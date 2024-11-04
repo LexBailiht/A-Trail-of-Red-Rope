@@ -51,4 +51,8 @@ public class AnimationManager : MonoBehaviour
     {
         SelectedAnimation.SetActive(true);
     }
+    public void ClearAnimation()
+    {
+        SelectedAnimation.SetActive(false);
+    }
 }
