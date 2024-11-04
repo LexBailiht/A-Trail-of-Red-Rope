@@ -43,25 +43,31 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void NextLevel() 
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
     public void ToggleSettings()
     {
         if (SettingsState == false)
         {
             SettingsState = true;
-            SFXAudioSource.GetComponent<SFXmanager>().PlaySoundEffect("settingsopen");
+            SFXAudioSource.GetComponent<SFXmanager>().PlaySoundEffect("sfx-settingsopen");
             settingsanimator.SetBool("IsOpen", true);
             Time.timeScale = 0f;
             NotebookButton.enabled = false;
             AudioSource.Pause();
+           // SettingsMenu.SetActive(true);
         } else
         {
             SettingsState = false;
             settingsanimator.SetBool("IsOpen", false);
             Time.timeScale = 1f;
             NotebookButton.enabled = true;
-            SFXAudioSource.GetComponent<SFXmanager>().PlaySoundEffect("cancel");
+            SFXAudioSource.GetComponent<SFXmanager>().PlaySoundEffect("sfx-cancel");
             AudioSource.Play();
-
+            //SettingsMenu.SetActive(false);
         }
     }
 
