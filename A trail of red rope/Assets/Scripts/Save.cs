@@ -4,6 +4,7 @@ using System.IO;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static Unity.Burst.Intrinsics.Arm;
 
 public class Save : MonoBehaviour
 {
@@ -13,11 +14,12 @@ public class Save : MonoBehaviour
     public GameObject BackgroundManager;
     public GameObject AnimationManager;
     public GameObject DialogueManager;
+    public GameObject QTEbehavior;
     public string path;
     public GameStateData loadedGameStateData;
     public void SaveGame()
     {
-        loadedGameStateData = new GameStateData(gameManager, OSTManager, SFXManager, BackgroundManager, AnimationManager, DialogueManager);
+        loadedGameStateData = new GameStateData(gameManager, OSTManager, SFXManager, BackgroundManager, AnimationManager, DialogueManager, QTEbehavior);
         string json = JsonUtility.ToJson(loadedGameStateData);
 
         path = Application.persistentDataPath  + "/GameStateData.json";
@@ -36,7 +38,7 @@ public class Save : MonoBehaviour
             string loaddata = File.ReadAllText(path);
             loadedGameStateData = JsonUtility.FromJson<GameStateData>(loaddata);
 
-            LoadGame(gameManager, OSTManager, SFXManager, BackgroundManager, AnimationManager, DialogueManager);
+            LoadGame(gameManager, OSTManager, SFXManager, BackgroundManager, AnimationManager, DialogueManager, QTEbehavior);
         }
         else
         {
@@ -44,7 +46,7 @@ public class Save : MonoBehaviour
         }
 
     }
-    public void LoadGame(GameManager gameManager, GameObject OSTManager, GameObject SFXManager, GameObject BackgroundManager, GameObject AnimationManager, GameObject DialogueManager)
+    public void LoadGame(GameManager gameManager, GameObject OSTManager, GameObject SFXManager, GameObject BackgroundManager, GameObject AnimationManager, GameObject DialogueManager, GameObject QTEbehavior)
     {
         //SceneManager.LoadScene("Lex - test");
         gameManager.DialogueNumber = loadedGameStateData.DialogueNumber;
@@ -63,6 +65,7 @@ public class Save : MonoBehaviour
 
         BackgroundManager.GetComponent<BackgroundManager>().SelectedBackground = loadedGameStateData.SelectedBackground;
         BackgroundManager.GetComponent<BackgroundManager>().LoadBackground();
+        AnimationManager.GetComponent<AnimationManager>().ClearAnimation();
         AnimationManager.GetComponent<AnimationManager>().SelectedAnimation = loadedGameStateData.SelectedAnimation;
         AnimationManager.GetComponent<AnimationManager>().LoadAnimation();
 
@@ -75,5 +78,8 @@ public class Save : MonoBehaviour
             DialogueManager.GetComponent<DialogueManager>().EndDialogue();
         }
         OSTManager.GetComponent<OSTchanger>().LoadMusic();
+
+        QTEbehavior.GetComponent<QTEbehavior>().qteON = loadedGameStateData.qteON;
+        QTEbehavior.GetComponent<QTEbehavior>().PassQTE = loadedGameStateData.PassQTE;
     }
 }

@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class NotepadTrigger : MonoBehaviour
 {
     public GameObject Paper;
+    public TMP_InputField InputField;
     private bool paperON;
-    //public Button button;
+    public string NotebookText;
     public bool hasClicked = false;
     public Animator animator;
     public AudioSource SFXAudioSource;
@@ -38,6 +40,10 @@ public class NotepadTrigger : MonoBehaviour
             SFXAudioSource.GetComponent<SFXmanager>().PlaySoundEffect("cancel");
         }
         
+    }
+    public void SaveText()
+    {
+        NotebookText = InputField.text.ToString();
     }
 
     IEnumerator ButtonReset()

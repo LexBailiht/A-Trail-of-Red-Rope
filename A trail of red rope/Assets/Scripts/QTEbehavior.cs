@@ -9,7 +9,7 @@ using Unity.VisualScripting;
 public class QTEbehavior : MonoBehaviour
 {
     public GameObject QTE;
-    private bool qteON;
+    public bool qteON;
     private float TimerAmount = 1f;
     private float CurrentTimer;
     public int PassQTE;

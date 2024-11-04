@@ -26,7 +26,10 @@ public class GameStateData
     public int CurrentDialogue;
     public Dialogue Dialogue;
 
-    public GameStateData(GameManager gameManager, GameObject OSTManager, GameObject SFXManager, GameObject BackgroundManager, GameObject AnimationManager, GameObject DialogueManager)
+    public bool qteON;
+    public int PassQTE;
+
+    public GameStateData(GameManager gameManager, GameObject OSTManager, GameObject SFXManager, GameObject BackgroundManager, GameObject AnimationManager, GameObject DialogueManager, GameObject QTEbehavior)
     {
         DialogueNumber = gameManager.DialogueNumber;
         LastDialogueNumber = gameManager.LastDialogueNumber;
@@ -47,6 +50,9 @@ public class GameStateData
 
         CurrentDialogue = DialogueManager.GetComponent<DialogueManager>().CurrentDialogue;
         Dialogue = DialogueManager.GetComponent<DialogueManager>().Dialogue;
+
+        qteON = QTEbehavior.GetComponent<QTEbehavior>().qteON;
+        PassQTE = QTEbehavior.GetComponent<QTEbehavior>().PassQTE;
     }
 
 }
