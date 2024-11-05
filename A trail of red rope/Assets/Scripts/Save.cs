@@ -49,7 +49,7 @@ public class Save : MonoBehaviour
     }
     public void LoadGame(GameManager gameManager, GameObject OSTManager, GameObject SFXManager, GameObject BackgroundManager, GameObject AnimationManager, GameObject DialogueManager, GameObject QTEbehavior, GameObject NotepadTrigger)
     {
-        //SceneManager.LoadScene("Lex - test");
+        
         gameManager.DialogueNumber = loadedGameStateData.DialogueNumber;
         gameManager.LastDialogueNumber = loadedGameStateData.LastDialogueNumber;
         gameManager.TalkDialogueNumber = loadedGameStateData.TalkDialogueNumber;
@@ -57,13 +57,14 @@ public class Save : MonoBehaviour
         gameManager.ScrutinizeLastDialogueNumber = loadedGameStateData.ScrutinizeDialogueNumber;
         gameManager.ScrutinizeLastDialogueNumber = loadedGameStateData.ScrutinizeLastDialogueNumber;
         gameManager.InvestigateDialogueNumber = loadedGameStateData.InvestigateDialogueNumber;
-        gameManager.InvestigateLastDialogueNumber = loadedGameStateData.InvestigateLastDialogueNumber; ;
+        gameManager.InvestigateLastDialogueNumber = loadedGameStateData.InvestigateLastDialogueNumber;
         gameManager.MoveDialogueNumber = loadedGameStateData.MoveDialogueNumber;
         gameManager.MoveLastDialogueNumber = loadedGameStateData.MoveLastDialogueNumber;
 
         OSTManager.GetComponent<OSTchanger>().selectedOST = loadedGameStateData.selectedOST;
         SFXManager.GetComponent<SFXmanager>().selectedSFX = loadedGameStateData.selectedSFX;
 
+        BackgroundManager.GetComponent<BackgroundManager>().ClearBackground();
         BackgroundManager.GetComponent<BackgroundManager>().SelectedBackground = loadedGameStateData.SelectedBackground;
         BackgroundManager.GetComponent<BackgroundManager>().LoadBackground();
         AnimationManager.GetComponent<AnimationManager>().ClearAnimation();
@@ -85,5 +86,6 @@ public class Save : MonoBehaviour
 
         NotepadTrigger.GetComponent<NotepadTrigger>().NotebookText = loadedGameStateData.NotebookText;
         NotepadTrigger.GetComponent<NotepadTrigger>().LoadText();
+        Debug.Log("Savefile has been loaded");
     }
 }

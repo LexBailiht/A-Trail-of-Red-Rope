@@ -10,6 +10,7 @@ TagManager:
   - investigate
   - move
   - SFX
+  - GameManager
   layers:
   - Default
   - TransparentFX

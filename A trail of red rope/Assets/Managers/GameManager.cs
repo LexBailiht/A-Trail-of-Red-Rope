@@ -74,14 +74,18 @@ public class GameManager : MonoBehaviour
     public void UpdateMasterVolume()
     {
         MasterVolume = MasterVolumeSlider.value;
+        MusicVolume = MusicVolumeSlider.value;
+        SFXVolume = SFXVolumeSlider.value;
         AudioSource.volume = MusicVolume * MasterVolume;
         SFXAudioSource.volume = SFXVolume * MasterVolume;
         SFXVolumeOut = SFXAudioSource.volume;
+        MusicVolumeOut = AudioSource.volume;
     }
     public void UpdateMusicVolume()
     {
         MusicVolume = MusicVolumeSlider.value;
         AudioSource.volume = MusicVolume * MasterVolume;
+        MusicVolumeOut = AudioSource.volume;
     }
     public void UpdateSFXVolume()
     {

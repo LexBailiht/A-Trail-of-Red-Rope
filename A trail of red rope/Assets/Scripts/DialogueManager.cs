@@ -122,8 +122,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void DisplayNextSentence()
     {
-        //if (GameManager.GetComponent<GameManager>().SettingsState != true)
-        //{
+
             CurrentDialogue += 1;
             if (sentences.Count == 0)
             {
@@ -163,7 +162,6 @@ public class DialogueManager : MonoBehaviour
                 BroadcastMessage("SetAnimation", animation);
             }
             StartCoroutine(TypeSentence(sentence));
-       // }
     }
 
     IEnumerator TypeSentence (string sentence)
@@ -213,6 +211,17 @@ public class DialogueManager : MonoBehaviour
     public void OnDelayChanged()
     {
         delay = DelaySlider.value; 
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            OnClick();
+        }
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            OnRelease();
+        }
     }
     public void OnClick()
     {

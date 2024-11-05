@@ -15,7 +15,7 @@ public class SettingsSFXManager : MonoBehaviour
 
     public void UpdateVolume()
     {
-        Volume = GameManager.SFXVolumeOut;
+        Volume = GameManager.GetComponent<GameManager>().SFXVolumeOut;
         m_AudioSource.volume = Volume;
     }
 }
