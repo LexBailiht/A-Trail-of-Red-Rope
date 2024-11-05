@@ -51,6 +51,9 @@ public class QTEbehavior : MonoBehaviour
                 qteON = false;
                 gameObject.GetComponent<GameManager>().UpdateGameState();
             }
+        } else
+        {
+            QTE.SetActive(false);
         }
     }
 
