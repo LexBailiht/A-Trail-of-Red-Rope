@@ -57,4 +57,8 @@ public class NotepadTrigger : MonoBehaviour
     {
         paperON = false;
     }
+    public void LoadText()
+    {
+        InputField.text = NotebookText;
+    }
 }

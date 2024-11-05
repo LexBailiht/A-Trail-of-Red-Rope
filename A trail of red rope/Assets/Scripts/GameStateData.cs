@@ -29,7 +29,9 @@ public class GameStateData
     public bool qteON;
     public int PassQTE;
 
-    public GameStateData(GameManager gameManager, GameObject OSTManager, GameObject SFXManager, GameObject BackgroundManager, GameObject AnimationManager, GameObject DialogueManager, GameObject QTEbehavior)
+    public string NotebookText;
+
+    public GameStateData(GameManager gameManager, GameObject OSTManager, GameObject SFXManager, GameObject BackgroundManager, GameObject AnimationManager, GameObject DialogueManager, GameObject QTEbehavior, GameObject NotepadTrigger)
     {
         DialogueNumber = gameManager.DialogueNumber;
         LastDialogueNumber = gameManager.LastDialogueNumber;
@@ -53,6 +55,8 @@ public class GameStateData
 
         qteON = QTEbehavior.GetComponent<QTEbehavior>().qteON;
         PassQTE = QTEbehavior.GetComponent<QTEbehavior>().PassQTE;
+
+        NotebookText = NotepadTrigger.GetComponent<NotepadTrigger>().NotebookText;
     }
 
 }

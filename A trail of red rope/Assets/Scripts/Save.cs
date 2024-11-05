@@ -15,11 +15,12 @@ public class Save : MonoBehaviour
     public GameObject AnimationManager;
     public GameObject DialogueManager;
     public GameObject QTEbehavior;
+    public GameObject NotepadTrigger;
     public string path;
     public GameStateData loadedGameStateData;
     public void SaveGame()
     {
-        loadedGameStateData = new GameStateData(gameManager, OSTManager, SFXManager, BackgroundManager, AnimationManager, DialogueManager, QTEbehavior);
+        loadedGameStateData = new GameStateData(gameManager, OSTManager, SFXManager, BackgroundManager, AnimationManager, DialogueManager, QTEbehavior, NotepadTrigger);
         string json = JsonUtility.ToJson(loadedGameStateData);
 
         path = Application.persistentDataPath  + "/GameStateData.json";
@@ -38,7 +39,7 @@ public class Save : MonoBehaviour
             string loaddata = File.ReadAllText(path);
             loadedGameStateData = JsonUtility.FromJson<GameStateData>(loaddata);
 
-            LoadGame(gameManager, OSTManager, SFXManager, BackgroundManager, AnimationManager, DialogueManager, QTEbehavior);
+            LoadGame(gameManager, OSTManager, SFXManager, BackgroundManager, AnimationManager, DialogueManager, QTEbehavior, NotepadTrigger);
         }
         else
         {
@@ -46,7 +47,7 @@ public class Save : MonoBehaviour
         }
 
     }
-    public void LoadGame(GameManager gameManager, GameObject OSTManager, GameObject SFXManager, GameObject BackgroundManager, GameObject AnimationManager, GameObject DialogueManager, GameObject QTEbehavior)
+    public void LoadGame(GameManager gameManager, GameObject OSTManager, GameObject SFXManager, GameObject BackgroundManager, GameObject AnimationManager, GameObject DialogueManager, GameObject QTEbehavior, GameObject NotepadTrigger)
     {
         //SceneManager.LoadScene("Lex - test");
         gameManager.DialogueNumber = loadedGameStateData.DialogueNumber;
@@ -81,5 +82,8 @@ public class Save : MonoBehaviour
 
         QTEbehavior.GetComponent<QTEbehavior>().qteON = loadedGameStateData.qteON;
         QTEbehavior.GetComponent<QTEbehavior>().PassQTE = loadedGameStateData.PassQTE;
+
+        NotepadTrigger.GetComponent<NotepadTrigger>().NotebookText = loadedGameStateData.NotebookText;
+        NotepadTrigger.GetComponent<NotepadTrigger>().LoadText();
     }
 }

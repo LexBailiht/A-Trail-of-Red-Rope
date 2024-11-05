@@ -2332,6 +2332,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Paper: {fileID: 1440548930}
+  InputField: {fileID: 1966514673}
+  NotebookText: 
   hasClicked: 0
   animator: {fileID: 1440548935}
   SFXAudioSource: {fileID: 472663337}
@@ -5184,6 +5186,34 @@ PrefabInstance:
       propertyPath: m_GlobalFontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 8a57675767d27804782ee55832cb03f2, type: 2}
+    - target: {fileID: 383236567708286161, guid: 02fda27658be86b429819585f0af6fbf, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 383236567708286161, guid: 02fda27658be86b429819585f0af6fbf, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 383236567708286161, guid: 02fda27658be86b429819585f0af6fbf, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1260637728}
+    - target: {fileID: 383236567708286161, guid: 02fda27658be86b429819585f0af6fbf, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 383236567708286161, guid: 02fda27658be86b429819585f0af6fbf, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SaveText
+      objectReference: {fileID: 0}
+    - target: {fileID: 383236567708286161, guid: 02fda27658be86b429819585f0af6fbf, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NotepadTrigger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 383236567708286161, guid: 02fda27658be86b429819585f0af6fbf, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1174150053685304069, guid: 02fda27658be86b429819585f0af6fbf, type: 3}
       propertyPath: m_fontSize
       value: 32
@@ -5348,6 +5378,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1440548935}
   m_SourcePrefab: {fileID: 100100000, guid: 02fda27658be86b429819585f0af6fbf, type: 3}
+--- !u!114 &1966514673 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 383236567708286161, guid: 02fda27658be86b429819585f0af6fbf, type: 3}
+  m_PrefabInstance: {fileID: 1966514672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440548930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1969492312
 GameObject:
   m_ObjectHideFlags: 0
@@ -6347,6 +6388,14 @@ PrefabInstance:
       propertyPath: SFXManager
       value: 
       objectReference: {fileID: 472663334}
+    - target: {fileID: 3997940038397489737, guid: 0e0441b6cebb1a04cac863cee831350c, type: 3}
+      propertyPath: QTEbehavior
+      value: 
+      objectReference: {fileID: 1799654814}
+    - target: {fileID: 3997940038397489737, guid: 0e0441b6cebb1a04cac863cee831350c, type: 3}
+      propertyPath: NotepadTrigger
+      value: 
+      objectReference: {fileID: 760337872}
     - target: {fileID: 3997940038397489737, guid: 0e0441b6cebb1a04cac863cee831350c, type: 3}
       propertyPath: DialogueManager
       value: 
