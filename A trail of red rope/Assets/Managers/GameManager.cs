@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
         if (SettingsState == false)
         {
             SettingsState = true;
-            SFXAudioSource.GetComponent<SFXmanager>().PlaySoundEffect("sfx-settingsopen");
+            SFXAudioSource.GetComponent<SFXmanager>().PlaySoundEffect("settingsopen");
             settingsanimator.SetBool("IsOpen", true);
             Time.timeScale = 0f;
             NotebookButton.enabled = false;
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
             settingsanimator.SetBool("IsOpen", false);
             Time.timeScale = 1f;
             NotebookButton.enabled = true;
-            SFXAudioSource.GetComponent<SFXmanager>().PlaySoundEffect("sfx-cancel");
+            SFXAudioSource.GetComponent<SFXmanager>().PlaySoundEffect("cancel");
             AudioSource.Play();
             //SettingsMenu.SetActive(false);
         }
